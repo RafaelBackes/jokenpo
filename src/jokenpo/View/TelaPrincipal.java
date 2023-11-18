@@ -5,17 +5,30 @@
  */
 package jokenpo.View;
 
+import java.util.Random;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 632120013
  */
 public class TelaPrincipal extends javax.swing.JFrame {
+    private String jogada;
+    int rivale;
+    
+    Random r = new Random(); 
+    
+    
+    
+            
 
     /**
      * Creates new form TelaPrincipal
      */
     public TelaPrincipal() {
         initComponents();
+        
+        
     }
 
     /**
@@ -27,21 +40,91 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jButtonJogar = new javax.swing.JButton();
+        jComboBoxEscolha = new javax.swing.JComboBox<>();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setText("Jokenpo 2000");
+
+        jButtonJogar.setText("Jogar");
+        jButtonJogar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonJogarActionPerformed(evt);
+            }
+        });
+
+        jComboBoxEscolha.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nenhum", "Pedra", "Papel", "Tesoura", " " }));
+        jComboBoxEscolha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxEscolhaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(298, 298, 298)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jComboBoxEscolha, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addContainerGap(304, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1)
+                .addGap(168, 168, 168)
+                .addComponent(jButtonJogar, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addComponent(jComboBoxEscolha, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(120, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonJogarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJogarActionPerformed
+        String decisao  =  jogada;
+        rivale = (int)(Math.random()*3)+1;
+        
+            if(decisao== "Pedra" && (rivale == 1)){
+                JOptionPane.showMessageDialog(null,"Jogada Empatada" );
+            }else if(jogada== "Pedra" && (rivale == 2)){
+            JOptionPane.showMessageDialog(null,"Você Perdeu !" );
+                System.out.println(rivale);
+        }else if (jogada== "Pedra" && (rivale == 3)){
+            JOptionPane.showMessageDialog(null,"Você VENCEU !!! " );
+        }else if (jogada== "Papel" && (rivale == 1)){
+            
+        }
+        
+    }//GEN-LAST:event_jButtonJogarActionPerformed
+
+    private void jComboBoxEscolhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxEscolhaActionPerformed
+    jogada = jComboBoxEscolha.getSelectedItem().toString();
+    
+    
+    
+    }//GEN-LAST:event_jComboBoxEscolhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +162,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonJogar;
+    private javax.swing.JComboBox<String> jComboBoxEscolha;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

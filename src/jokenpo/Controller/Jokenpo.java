@@ -5,6 +5,9 @@
  */
 package jokenpo.Controller;
 
+import javax.swing.JFrame;
+import jokenpo.View.TelaPrincipal;
+
 /**
  *
  * @author 632120013
@@ -15,12 +18,13 @@ public class Jokenpo {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Olá Mundo ");
-        System.out.println("Olá Rafael");
-        System.out.println("Olá Rafael");
-        System.out.println("Olá Rafael");
-        System.out.println("Olá Rafael");
-        System.out.println("Olá Rafael");
+        TelaPrincipal j = new TelaPrincipal();
+        
+        j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        j.setSize(1000,1000);
+        j.setVisible(true);
+        
+        
         
     }
     
