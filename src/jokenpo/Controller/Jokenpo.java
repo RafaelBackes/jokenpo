@@ -24,6 +24,7 @@ public class Jokenpo {
         j.setSize(1000,1000);
         j.setVisible(true);
         System.out.println("Rafael");
+        System.out.println("Pedro");
         
         
     }
