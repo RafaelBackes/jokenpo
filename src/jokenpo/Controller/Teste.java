@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package jokenpo.Controller;
 
 /**
  *
  * @author 632120013
  */
-public class novaClasse {
+public class Teste {
     
 }
