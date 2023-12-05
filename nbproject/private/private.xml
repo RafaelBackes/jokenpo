@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/632120013/Documents/NetBeansProjects/Jokenpo/src/jokenpo/Controller/Jokenpo.java</file>
-            <file>file:/C:/Users/632120013/Documents/NetBeansProjects/Jokenpo/src/jokenpo/View/TelaPrincipal.java</file>
+            <file>file:/C:/Users/632120013/Documents/NetBeansProjects/jokenpo-main/src/jokenpo/Controller/Jogada.java</file>
+            <file>file:/C:/Users/632120013/Documents/NetBeansProjects/jokenpo-main/src/jokenpo/View/TelaPrincipal.java</file>
+            <file>file:/C:/Users/632120013/Documents/NetBeansProjects/jokenpo-main/src/jokenpo/Controller/Jokenpo.java</file>
+            <file>file:/C:/Users/632120013/Documents/NetBeansProjects/jokenpo-main/src/jokenpo/Controller/Teste.java</file>
         </group>
     </open-files>
 </project-private>
