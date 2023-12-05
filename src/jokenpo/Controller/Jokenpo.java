@@ -25,7 +25,11 @@ public class Jokenpo {
         j.setVisible(true);
         System.out.println("Rafael");
         System.out.println("Pedro");
+<<<<<<< HEAD
         
+=======
+        System.out.println("Roberto");
+>>>>>>> d8117b4c58e067642683f6b6e335b7cd6e5fe1cf
         
     }
     
